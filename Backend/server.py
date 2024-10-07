@@ -45,7 +45,7 @@ def delete_overlay(id):
 
 
 # Replace with your RTSP stream URL
-rtsp_url = "rtsp://rtspstream:8ebbcf20e0ee416c66f839cd3ffda06f@zephyr.rtsp.stream/movie"
+rtsp_url = "your rtsp url"
 
 def generate_frames():
     cap = cv2.VideoCapture(rtsp_url)  # Open the RTSP stream
