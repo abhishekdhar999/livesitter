@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 # MongoDB configuration
-app.config["MONGO_URI"] = "mongodb://localhost:27017/overlaysDB"
+app.config["MONGO_URI"] = "your mongodb url"
 mongo = PyMongo(app)
 
 @app.route('/overlays', methods=['POST'])
