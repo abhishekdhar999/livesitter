@@ -13,7 +13,6 @@ CORS(app)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/overlaysDB"
 mongo = PyMongo(app)
 
-# Create an overlay
 @app.route('/overlays', methods=['POST'])
 @cross_origin()
 def create_overlay():
@@ -46,7 +45,7 @@ def delete_overlay(id):
 
 
 # Replace with your RTSP stream URL
-rtsp_url =  "your rtsp url"
+rtsp_url =  ""
 
 def generate_frames():
     cap = cv2.VideoCapture(rtsp_url)  # Open the RTSP stream
