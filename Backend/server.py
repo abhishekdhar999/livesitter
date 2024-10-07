@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 # MongoDB configuration
-app.config["MONGO_URI"] = "mongodb://localhost:27017/overlaysDB"
+app.config["MONGO_URI"] = "your mongodb url"
 mongo = PyMongo(app)
 
 @app.route('/overlays', methods=['POST'])
@@ -45,7 +45,7 @@ def delete_overlay(id):
 
 
 # Replace with your RTSP stream URL
-rtsp_url =  ""
+rtsp_url = "rtsp://rtspstream:8ebbcf20e0ee416c66f839cd3ffda06f@zephyr.rtsp.stream/movie"
 
 def generate_frames():
     cap = cv2.VideoCapture(rtsp_url)  # Open the RTSP stream
